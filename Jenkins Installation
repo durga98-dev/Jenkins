@@ -1,0 +1,10 @@
+1. Prerequisite for jenkins is JAVA ( install latest version of java as it will have compatibility issues )
+2. Jenkins Default port no: 8080
+3. Jenkins Default path: /var/lib/jenkins
+
+Step1: Launch an instance with 8080 port number.
+Step2: Install Java 17
+Step3: Get the repo from Jenkins.io - official website
+Step4: Install Jenkins
+Step5: Start the Jenkins
+
