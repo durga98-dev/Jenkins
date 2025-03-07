@@ -3,8 +3,18 @@
 3. Jenkins Default path: /var/lib/jenkins
 
 Step1: Launch an instance with 8080 port number.
+       yum update -y
 Step2: Install Java 17
 Step3: Get the repo from Jenkins.io - official website
 Step4: Install Jenkins
 Step5: Start the Jenkins
 
+amazon-linux-extras install java-openjdk11 -y
+yum install maven -y #java11 dependency
+yum install git -y
+wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+yum install java-17-amazon-corretto -y
+yum install jenkins -y #java 17 dependency
+systemctl start jenkins
+systemctl status jenkins
