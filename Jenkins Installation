@@ -8,7 +8,8 @@ Step2: Install Java 17
 Step3: Get the repo from Jenkins.io - official website
 Step4: Install Jenkins
 Step5: Start the Jenkins
-
+==================================================================================
+#Linux
 amazon-linux-extras install java-openjdk11 -y
 yum install maven -y #java11 dependency
 yum install git -y
@@ -18,3 +19,20 @@ yum install java-17-amazon-corretto -y
 yum install jenkins -y #java 17 dependency
 systemctl start jenkins
 systemctl status jenkins
+===============================================================================
+#ubuntu#
+apt update -y
+apt install openjdk-11-jdk -y
+apt install maven -y
+apt install git -y
+wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+apt install openjdk-17-jdk -y
+apt-get update
+apt-get install jenkins
+systemctl start jenkins
+systemctl status jenkins
+
