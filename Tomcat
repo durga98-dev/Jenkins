@@ -1,0 +1,12 @@
+Tomcat - Application server/ port - 8080
+Java dependency
+1. Install Java
+apt install openjdk-11-jdk -y
+2. Get the repo from web
+wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.5/bin/apache-tomcat-11.0.5.tar.gz
+3. untar the directory
+tar -zxvf apache-tomcat-11.0.5.tar.gz
+4. Go to bin directory and start the jenkins server
+cd /apache-tomcat-11.0.5/bin
+./startup.sh
+5. 
