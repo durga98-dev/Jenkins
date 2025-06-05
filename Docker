@@ -26,3 +26,6 @@ sudo docker ps -a
 
 #instead of using sudo every time give permissions to ubuntu user on docker
 sudo usermod -aG docker ubuntu #adding ubuntu user to docker group
+
+#logout of the putty session and connect back to see the changes. Now we can execute the docker commands without sudo.
+docker ps -a
