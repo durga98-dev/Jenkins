@@ -23,3 +23,6 @@ sudo docker run hello-world
 
 #To check the running and stopped containers
 sudo docker ps -a
+
+#instead of using sudo every time give permissions to ubuntu user on docker
+sudo usermod -aG docker ubuntu #adding ubuntu user to docker group
