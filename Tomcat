@@ -10,3 +10,10 @@ tar -zxvf apache-tomcat-11.0.5.tar.gz
 cd /apache-tomcat-11.0.5/bin
 ./startup.sh
 5. 
+
+#Commands to install Tomcat#
+apt install openjdk-11-jdk -y
+wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.5/bin/apache-tomcat-11.0.5.tar.gz
+tar -zxvf apache-tomcat-11.0.5.tar.gz
+cd /apache-tomcat-11.0.5/bin
+./startup.sh
