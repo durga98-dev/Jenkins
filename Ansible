@@ -24,3 +24,16 @@ ssh-copy-id ansible@<slave_publicip> # this command will directly copy only publ
 # Connect slaves to master
 ssh ansible@<slave_publicip>
 exit
+
+===================================================================================
+Create inventory as root user
+cd /etc/ansible/hosts    #hosts is the default inventory file
+#Adjust in ansible.cfg ( uncomment two lines )
+vi hosts
+
+[dev] #groupname
+<ip>
+<ip>
+[test]
+<ip>
+<ip>
