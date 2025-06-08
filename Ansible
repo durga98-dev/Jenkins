@@ -1,0 +1,9 @@
+# Ansible installation - Ansible doesn't track dependency
+# python dependency - install python if not present - no particular version
+amazon-linux-extras install ansible2 -y
+yum install python-pip -y
+useradd ansible  #can be any username but should be same on all the servers
+passwd ansible 
+visudo #go to 100th line and copy paste and add it as ansible
+vi /etc/ssh/sshd_config # go to 63rd line make yes or password authentication yes
+systemctl restart sshd
