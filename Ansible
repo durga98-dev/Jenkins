@@ -9,3 +9,18 @@ vi /etc/ssh/sshd_config # go to 63rd line make yes or password authentication ye
 systemctl restart sshd 
 
 # Repeat from useradd step in all the slaves
+
+#In Master
+# Login as ansible user
+su - ansible
+
+# Generate a key
+ssh-keygen
+
+# copy the public-key to slave servers
+/home/ansible/.ssh/id_rsa.pub
+ssh-copy-id ansible@<slave_publicip> # this command will directly copy only public ip address
+
+# Connect slaves to master
+ssh ansible@<slave_publicip>
+exit
