@@ -13,3 +13,8 @@ grep 'temporary password' /var/log/mysqld.log
 $> mysql -u root -p
 
 alter user 'root'@'localhost' identified by 'Root@123'; #changing the mysqlroot user password
+alter user user() identified by 'Root@123';
+
+create user 'rootphp'@'localhost' identified with mysql_native_password by 'Root@123';
+
+grant all on *.* to 'rootphp'@'localhost';
