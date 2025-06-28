@@ -3,7 +3,7 @@
 # shell scrip is smart enough to recognize the data types
 
 num1=$1
-num2=$2
+num2=$2 # even if we pass string, shell is smart enough & will consider as zero
 
 Timestamp=$(date)
 sum=$(($num1+$num2))
