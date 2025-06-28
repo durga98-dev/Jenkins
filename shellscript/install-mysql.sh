@@ -2,14 +2,19 @@
 
 id=$(id -u)
 
-if [ $id -eq 0 ]
+dnf list installed mysql
+if [ $? -ne 0]
 then
-    echo "install Mysqld"
-    dnf install mysql-server -y
+    if [ $id -eq 0 ]
+    then
+        echo "install Mysqld"
+        dnf install mysql-server -y
+    else
+        echo "Error:: Must be root user to install mysql"
+        exit 1 # other than 0 as 0 indicates it is success
+    fi
 else
-    echo "Error:: Must be root user to install mysql"
-    exit 1 # other than 0 as 0 indicates it is success
-fi
+    echo "Mysql already installed....."
 
 #check if installation is success or not
 
