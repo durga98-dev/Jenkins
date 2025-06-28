@@ -8,7 +8,7 @@ then
     dnf install mysql-server -y
 else
     echo "Error:: Must be root user to install mysql"
-    exit1
+    exit 1 # other than 0 as 0 indicates it is success
 fi
 
 #check if installation is success or not
