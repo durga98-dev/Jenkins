@@ -4,7 +4,7 @@
 
 id=$(id -u)
 
-if [ $id -ne 0]
+if [ $id -ne 0 ]
 then 
    echo "Error: Must be root user to install the packages"
    exit 1 # other than 0 as 0 indicates it is success
