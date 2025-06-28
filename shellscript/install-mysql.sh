@@ -23,7 +23,7 @@ fi
 if [ $id -eq 0 ]
 then
     echo "install Git"
-    dnf install Git -y
+    dnf install git -y
 else
     echo "Error:: Must be root user to install mysql"
     exit 1 # other than 0 as 0 indicates it is success
