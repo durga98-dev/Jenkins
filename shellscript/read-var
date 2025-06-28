@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo " Please enter your username: "
+read USERNAME # USERNAME is varaible 
+# read is used for prompting data while executing the script
+
+echo " Username is: $USERNAME "
