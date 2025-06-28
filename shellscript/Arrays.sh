@@ -6,6 +6,7 @@ Toys=("Tom" "Jerry" "Duck" "Elephant")
 
 echo "First Toy name is: ${Toys[0]}"
 echo "All toys are: ${Toys[@]}"
+echo "Second Toy is: ${Toys[1]}"
 
 # for i in ${Toys[@]}
 # do
