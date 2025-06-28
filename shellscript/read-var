@@ -5,3 +5,7 @@ read USERNAME # USERNAME is varaible
 # read is used for prompting data while executing the script
 
 echo " Username is: $USERNAME "
+
+echo "Enter your password: "
+read -s PASS
+echo "password saved successfully"
