@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo ("please enter the number: ")
+echo "please enter the number: "
 read NUM
 
-if [ $NUM <= 100 ]
+# -gt, -lt, -eq, -le, -ge
+if [ $NUM -le 100 ]
 then
     echo "$NUM is less than or equal to 100"
 else    
