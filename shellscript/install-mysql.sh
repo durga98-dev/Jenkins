@@ -3,6 +3,7 @@
 id=$(id -u)
 
 dnf list installed mysql
+
 if [ $? -ne 0]
 then
     if [ $id -eq 0 ]
@@ -15,6 +16,7 @@ then
     fi
 else
     echo "Mysql already installed....."
+fi
 
 #check if installation is success or not
 
