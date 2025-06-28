@@ -3,6 +3,7 @@
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+N="\e[0m"
 
 LOG_FOLDER="/var/log/scrip-logs"
 LOG_FILE=$(echo $0|cut -d "." -f1 )
@@ -20,9 +21,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
         then
-            echo -e "$2.... is $G SUCCESS"
+            echo -e "$2.... is $G SUCCESS $N"
         else
-            echo -e "$2.... is $R FAILED"
+            echo -e "$2.... is $R FAILED $N"
     fi
 }
 
@@ -32,9 +33,9 @@ if [ $? -ne 0 ]
 then
     echo "Install Mysqld"
     dnf install mysql-server -y &>>$LOG_FILE_NAME
-    VALIDATE $? Mysql Installation # $? = input1 ,Mysql installation = input2  
+    VALIDATE $? "Mysql Installation" # $? = input1 ,Mysql installation = input2  
 else
-    echo -e "$Y Mysql already installed....."
+    echo -e "$Y Mysql already installed.....$N"
 fi
 
 dnf list installed git &>>$LOG_FILE_NAME
@@ -43,8 +44,8 @@ if [ $? -ne 0 ]
 then
     echo "Install Git"
     dnf install git -y &>>$LOG_FILE_NAME
-    VALIDATE $? Git Installation # $? = input1 ,Git installation = input2   
+    VALIDATE $? "Git Installation" # $? = input1 ,Git installation = input2   
 else
-    echo -e "$Y Git already installed....."
+    echo -e "$Y Git already installed.....$N"
 fi
 
