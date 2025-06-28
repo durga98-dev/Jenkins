@@ -25,7 +25,7 @@ then
     echo "install Git"
     dnf install git -y
 else
-    echo "Error:: Must be root user to install mysql"
+    echo "Error:: Must be root user to install git"
     exit 1 # other than 0 as 0 indicates it is success
 fi
 
@@ -34,4 +34,5 @@ then
     echo "Git Installation.... is success"
 else
     echo "Git Installation.... is Failed"
+fi
 
