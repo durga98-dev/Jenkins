@@ -4,7 +4,7 @@ id=$(id -u)
 
 dnf list installed mysql
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
     if [ $id -eq 0 ]
     then
