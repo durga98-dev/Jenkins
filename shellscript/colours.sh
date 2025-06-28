@@ -9,4 +9,4 @@ echo -e "\e[33mHello World" #Yellow
 echo -e "\e[34mHello World" #Dark Blue
 echo -e "\e[35mHello World" #Purple
 echo -e "\e[36mHello World" #Light blue
-echo -e "\e[37mHello World" # 
+echo -e "\e[37mHello World" #Grey

@@ -1,6 +1,8 @@
 #!/bin/bash
 
-#!/bin/bash
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
 
 id=$(id -u)
 
@@ -13,9 +15,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
         then
-            echo "$2.... is success"
+            echo "$2.... is $G SUCCESS"
         else
-            echo "$2.... is Failed"
+            echo "$2.... is $R FAILED"
     fi
 }
 
@@ -23,11 +25,11 @@ dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
-    echo "install Mysqld"
+    echo "Install Mysqld"
     dnf install mysql-server -y
     VALIDATE $? Mysql Installation # $? = input1 ,Mysql installation = input2  
 else
-    echo "Mysql already installed....."
+    echo "$Y Mysql already installed....."
 fi
 
 dnf list installed git
@@ -38,6 +40,6 @@ then
     dnf install git -y
     VALIDATE $? Git Installation # $? = input1 ,Git installation = input2   
 else
-    echo "Git already installed....."
+    echo "$Y Git already installed....."
 fi
 
