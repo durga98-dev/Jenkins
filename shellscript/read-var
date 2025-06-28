@@ -7,5 +7,5 @@ read USERNAME # USERNAME is varaible
 echo " Username is: $USERNAME "
 
 echo "Enter your password: "
-read -s PASS
+read -s PASS # -s is used when the user doesn't want to see the data what is being typed
 echo "password saved successfully"
