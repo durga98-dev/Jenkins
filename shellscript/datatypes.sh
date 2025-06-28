@@ -10,4 +10,4 @@ sum=$(($num1+$num2))
 
 echo "script executed at: $Timestamp"
 
-echo ("sum of $num1 and $num2 is: $sum")
+echo "sum of $num1 and $num2 is: $sum"
