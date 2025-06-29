@@ -35,6 +35,7 @@ for package in $@
 do
     dnf list installed $package &>>LOG_FILE_NAME
     if [ $? -ne 0 ]
+    then
         dnf install $package -y
         VALIDATE $? "Installing $package"
     else
