@@ -1,8 +1,8 @@
 {
-    "name": "Durga",
+    "name": "Durga", # fields
     "email": "durgadevi0707@gmail.com",
     "addresses": 
-    [
+    [                                                 
         {
             "type": "Current address",
             "doorno.": "123",
@@ -18,3 +18,5 @@
     ]
 
 }
+
+#[] - means list, {} - objects
