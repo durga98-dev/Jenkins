@@ -3,7 +3,11 @@
   become: yes #Enabling root user
   tasks:
     - name: Installing Nginx
-      dnf: name=nginx state=present
+      ansible.builtin.package: 
+        name=nginx 
+        state=present
     - name: To start nginx server
-      service: name=nginx state=started  
+      ansible.builtin.service: 
+        name=nginx
+        state=started  
     
