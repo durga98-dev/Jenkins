@@ -2,9 +2,9 @@
   hosts: local
   connection: local
   vars_prompt:
-    - name: GREET
-      prompt: please enter value"
-      PRIVATE: false
+  - name: GREET
+    prompt: "please enter value"
+    PRIVATE: false
   vars:
     GREET: "PLAY level"
   vars_files:
