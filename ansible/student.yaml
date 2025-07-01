@@ -1,0 +1,11 @@
+- name: Durga
+  email: durgadevi0707@gmail.com
+  addresses:
+  - type: permanent addresses   # - means List
+    doorno: 123
+    street: "L B nagar"
+    city: Hyderabad
+  - type: current addresses
+    doorno: 123
+    street: "L B nagar"     # if spaces keep it in double quotes
+    city: Hyderabad

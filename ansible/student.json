@@ -1,0 +1,20 @@
+{
+    "name": "Durga",
+    "email": "durgadevi0707@gmail.com",
+    "addresses": 
+    [
+        {
+            "type": "Current address",
+            "doorno.": "123",
+            "street": "L B Nagar",
+            "city": "Hyderabad"
+        }
+        {
+            "type": "Perm address",
+            "doorno.": "123",
+            "street": "L B Nagar",
+            "city": "Hyderabad"
+        }
+    ]
+
+}
