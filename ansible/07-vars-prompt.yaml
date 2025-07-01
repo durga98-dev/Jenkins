@@ -8,6 +8,7 @@
     prompt: Please enter Learner name:
   - name: DURATION
     prompt: please enter duration:
+    private: false
   tasks:
     - name: Print the variables
       debug:
