@@ -7,8 +7,8 @@
     private: false
   vars:
     GREET: "PLAY level"
-  vars_files:
-  - vars.yaml
+  # vars_files:
+  # - vars.yaml
   tasks:
     - name: Print the variables
       # vars:
@@ -19,6 +19,7 @@
 #Preference order
 #1. Arguments
 #2. Task level variables
-#3. 
+#3. File variables
+#4. 
 
 
