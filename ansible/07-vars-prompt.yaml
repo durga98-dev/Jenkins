@@ -3,11 +3,11 @@
   connection: local
   vars_prompt:
   - name: COURSE
-    prompt: please enter course name:
+    prompt: "please enter course name:"
   - name: LEARNER
-    prompt: Please enter Learner name:
+    prompt: "Please enter Learner name:"
   - name: DURATION
-    prompt: please enter duration:
+    prompt: "please enter duration:"
     private: false
   tasks:
     - name: Print the variables
