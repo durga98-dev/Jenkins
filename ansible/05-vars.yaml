@@ -1,0 +1,11 @@
+- name: Declare variables and use them
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "DEVOPS with AWS"
+    DURATION: "120 hrs"
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "I'm learning {{ COURSE }} which is of duration {{ DURATION }}"
+    
