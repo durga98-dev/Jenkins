@@ -1,0 +1,14 @@
+- name: Accessing variables via prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: COURSE
+    prompt: please enter course name:
+  - name: LEARNER
+    prompt: Please enter Learner name:
+  - name: DURATION
+    prompt: please enter duration:
+  tasks:
+    - name: Print the variables
+      debug:
+        msg: "I'm {{ LEARNER }}, learning {{ COURSE }} which is of duration {{ DURATION }}"
