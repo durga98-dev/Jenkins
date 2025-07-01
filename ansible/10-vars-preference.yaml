@@ -6,7 +6,7 @@
       prompt: please enter value"
       PRIVATE: false
   vars:
-    GREET= "PLAY level"
+    GREET: "PLAY level"
   vars_files:
   - vars.yaml
   tasks:
