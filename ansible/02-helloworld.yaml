@@ -1,4 +1,4 @@
-- name: print
+- name: print hello world
   hosts: web
   tasks:
   - name: Printing hello world
