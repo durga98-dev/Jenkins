@@ -5,8 +5,8 @@
   # - name: GREET
   #   prompt: "please enter value"
   #   private: false
-  vars:
-    GREET: "PLAY level"
+  # vars:
+  #   GREET: "PLAY level"
   # vars_files:
   # - vars.yaml
   tasks:
@@ -21,5 +21,6 @@
 #2. Task level variables
 #3. File variables
 #4. prompt variables
+#5. PLAY level
 
 
