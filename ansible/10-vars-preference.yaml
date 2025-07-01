@@ -7,8 +7,8 @@
   #   private: false
   # vars:
   #   GREET: "PLAY level"
-  # vars_files:
-  # - vars.yaml
+  vars_files:
+  - vars.yaml
   tasks:
     - name: Print the variables
       # vars:
@@ -23,5 +23,6 @@
 #4. prompt variables
 #5. PLAY level
 #6. variables Beside host in inventory 
+#7. from Invantory local:vars
 
 
