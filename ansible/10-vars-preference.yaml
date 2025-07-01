@@ -11,9 +11,14 @@
   - vars.yaml
   tasks:
     - name: Print the variables
-      vars:
-        GREET: "TASK level"
+      # vars:
+      #   GREET: "TASK level"
       debug:
         msg: "Hi from {{ GREET }}"
+
+#Preference order
+#1. Arguments
+#2. Task level variables
+#3. 
 
 
