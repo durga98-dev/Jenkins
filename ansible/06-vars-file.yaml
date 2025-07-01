@@ -1,0 +1,9 @@
+- name: Accessing variables via seperate file
+  hosts: local
+  connection: local
+  vars_files:
+  - vars.yaml
+  tasks:
+    - name: Print the variables
+      debug:
+        msg: "I'm {{ LEARNER }}, learning {{ COURSE }} which is of duration {{ DURATION }}"
