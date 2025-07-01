@@ -1,5 +1,6 @@
 - name: Install Nginx and start the service
   hosts: web
+  become: yes #Enabling root user
   tasks:
     - name: Installing Nginx
       dnf: name=nginx state=present
