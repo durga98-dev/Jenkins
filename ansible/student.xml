@@ -1,1 +1,30 @@
-
+<students>
+    <student1>
+        <Name>Durga</Name>
+        <email>durgadevi0707@gmail.com</email>
+        <addresses>
+            <Permanent address>
+                <doorno.>123</doorno.>
+                <street>Meerpet</street>
+            </Permanent address>
+            <current address>
+                <doorno.>123</doorno.>
+                <street>Meerpet</street>
+            </current address>
+        </addresses>
+    </student1>
+    <student2>
+        <Name>Durga</Name>
+        <email>durgadevi0707@gmail.com</email>
+        <addresses>
+            <Permanent address>
+                <doorno.>123</doorno.>
+                <street>Meerpet</street>
+            </Permanent address>
+            <current address>
+                <doorno.>123</doorno.>
+                <street>Meerpet</street>
+            </current address>
+        </addresses>
+    </student2>
+</students>
