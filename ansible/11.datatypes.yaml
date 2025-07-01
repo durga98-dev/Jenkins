@@ -1,0 +1,8 @@
+- name: Data types
+  hosts: local
+  connection: local
+  tasks:
+    - name: Print data types
+      debug:
+        msg: ""
+    
