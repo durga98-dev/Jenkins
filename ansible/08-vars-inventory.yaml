@@ -1,0 +1,7 @@
+- name: Accessing variables via prompt
+  hosts: local
+  connection: local
+  tasks:
+    - name: Print the variables
+      debug:
+        msg: "I'm {{ LEARNER }}, learning {{ COURSE }} which is of duration {{ DURATION }}"
