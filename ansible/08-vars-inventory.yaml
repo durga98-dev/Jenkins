@@ -1,6 +1,6 @@
 - name: Accessing variables via prompt
-  hosts: web, local
-  connection: local
+  hosts: web
+  connection: ssh
   tasks:
     - name: Print the variables
       debug:
