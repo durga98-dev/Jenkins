@@ -1,0 +1,19 @@
+- name: Accessing variables via prompt
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: GREET
+      prompt: please enter value"
+      PRIVATE: false
+  vars:
+    GREET= "PLAY level"
+  vars_files:
+  - vars.yaml
+  tasks:
+    - name: Print the variables
+      vars:
+        GREET: "TASK level"
+      debug:
+        msg: "Hi from {{ GREET }}"
+
+
