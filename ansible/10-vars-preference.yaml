@@ -1,10 +1,10 @@
 - name: Accessing variables via prompt
   hosts: local
   connection: local
-  vars_prompt:
-  - name: GREET
-    prompt: "please enter value"
-    private: false
+  # vars_prompt:
+  # - name: GREET
+  #   prompt: "please enter value"
+  #   private: false
   vars:
     GREET: "PLAY level"
   # vars_files:
@@ -20,6 +20,6 @@
 #1. Arguments
 #2. Task level variables
 #3. File variables
-#4. 
+#4. prompt variables
 
 
