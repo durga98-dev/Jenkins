@@ -1,7 +1,9 @@
 - name: Accessing variables via prompt
-  hosts: local
+  hosts: web, local
   connection: local
   tasks:
     - name: Print the variables
       debug:
         msg: "I'm {{ LEARNER }}, learning {{ COURSE }} which is of duration {{ DURATION }}"
+
+# if we mention variables in inventory no need to mention here. Ansible will check for variables in all possible ways
