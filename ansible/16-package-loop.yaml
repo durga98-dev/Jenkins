@@ -8,7 +8,7 @@
     ansible.builtin.packages:
       name: {{ item }}
       state: present
-    loop:
+    with_items:
     - git
     - tree
     - maven
