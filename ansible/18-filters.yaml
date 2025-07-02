@@ -40,4 +40,10 @@
       vars:
         name: "durgadevi"
       ansible.builtin.debug:
-        msg: "Converted to lowercase: {{ name | upper }}" 
+        msg: "Converted to uppercase: {{ name | upper }}" 
+
+    - name: Print min and max
+      vars:
+        num: [-1,34,67,8976,3456,7,3,89]
+      ansible.builtin.debug:
+        msg: "Min num is: {{ num | min }}, Max num is: {{ num | max }}"
