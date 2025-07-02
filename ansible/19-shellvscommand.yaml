@@ -4,4 +4,13 @@
   tasks:
     - name: execute shell vs command
       ansible.builtin.shell: ls -lrt > /tmp/shell.txt
-      ansible.builtin.command: ls -lrt > /tmp/command.txt
+      #ansible.builtin.command: ls -lrt > /tmp/command.txt
+
+    - name: execute ls command in command module
+      ansible.builtin.command: ls -ltr
+      register: command_output # to store the output
+
+    - name: Print the command command_output
+      debug:
+        msg: "{{ command_output }}"
+
