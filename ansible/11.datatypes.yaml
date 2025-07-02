@@ -1,8 +1,21 @@
 - name: Data types
   hosts: local
   connection: local
+  vars:
+    course_name: "Devops with AWS" # string
+    Duration: 120                  # number
+    topics: # list
+    - linux
+    - shell
+    - ansible
+    - git
+    live: true # Boolean
+    tools:     # Dictionary/Maps
+      ci: jenkins
+      cloud: AWS
+      containerization: Docker
   tasks:
     - name: Print data types
       debug:
-        msg: ""
+        msg: "Hello I'm learning {{ course_name }} {{ Duration }} and topics are {{ topics }} is it {{ live }}? tools covered are {{ tools }}"
     
