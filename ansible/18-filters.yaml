@@ -5,3 +5,10 @@
     - name: default variable
       ansible.builtin.debug:
         msg: "Default value is: {{ item | default ('Durga') }}"
+
+    - name: convert string to list
+      vars:
+        fruits: "'apple', banana, orange"
+      ansible.builtin.debug:
+        msg: "Fruits are: {{ fruits | split (,) }}"
+        
