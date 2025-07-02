@@ -1,0 +1,15 @@
+- name: check value greater than 10 or not
+  hosts: local
+  connection: local
+  vars:
+  - mynumber: 15
+  tasks:
+    - name: print if number is greater than 10
+      debug:
+        msg: "Given number {{ mynumber }} is greater than 10"
+      when: mynumber > 10
+  tasks:
+    - name: print if number is less than or equal to 10
+      debug:
+        msg: "Given number {{ mynumber }} is less than 10"
+      when: mynumber <= 10
