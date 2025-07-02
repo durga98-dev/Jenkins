@@ -1,0 +1,11 @@
+- name: Print the list of items
+  hosts: local
+  connection: local
+  tasks:
+  - name: using loop
+    ansible.builtin.debug:
+      msg: "Hello {{ item }}"  # item is the builtin variable to access values from loop
+    loop:
+    - Durga
+    - Devi
+    - Kapa
