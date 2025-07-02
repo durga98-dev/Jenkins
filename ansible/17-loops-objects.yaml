@@ -12,5 +12,6 @@
     loop:
     - { name: git, state: present }
     - { name: tree, state: absent }
-    - { name: zip, state: absent }
+    - { name: maven, state: absent }
     - { name: nginx, state: present }
+    - { name: zip, state: absent }
