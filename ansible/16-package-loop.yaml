@@ -1,0 +1,15 @@
+- name: Install packages using loop
+  hosts: local
+  connection: local
+  tasks:
+  - name: Install all the packages mentioned in loop
+    debug:
+      msg: "Installing {{ item }}"
+    ansible.builtin.packages:
+      name: {{ item }}
+      state: present
+    loop:
+    - git
+    - tree
+    - maven
+    - nginx
