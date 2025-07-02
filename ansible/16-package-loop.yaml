@@ -3,8 +3,8 @@
   connection: local
   tasks:
   - name: Install all the packages mentioned in loop
-    debug:
-      msg: "Installing {{ item }}"
+    # debug:
+    #   msg: "Installing {{ item }}"
     ansible.builtin.packages:
       name: "{{ item }}"
       state: present
