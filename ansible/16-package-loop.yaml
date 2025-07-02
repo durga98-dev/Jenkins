@@ -1,6 +1,7 @@
 - name: Install packages using loop
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: Install all the packages mentioned in loop
     # debug:
