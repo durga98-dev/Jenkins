@@ -1,0 +1,7 @@
+- name: undefined variable
+  hosts: local
+  connection: local
+  tasks:
+    - name: default variable
+      ansible.builtin.debug:
+        msg: "Default value is: {{ item }}"
