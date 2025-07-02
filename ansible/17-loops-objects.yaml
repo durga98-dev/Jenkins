@@ -6,7 +6,7 @@
   - name: Install all the packages mentioned in loop
     # debug:
     #   msg: "Installing {{ item }}"
-    ansible.builtin.packages:
+    ansible.builtin.package:
       name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
