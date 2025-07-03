@@ -16,6 +16,7 @@
       loop:
       - nodejs
       - zip
+      - mysql
 
     - name: Create expense login_user
       ansible.builtin.user:
@@ -45,4 +46,10 @@
       ansible.builtin.copy:
         src: /home/ec2-user/Jenkins/expense-ansible/backend.service
         dest: /etc/systemd/system/backend.service
+
+    - name: Restore database
+      community.mysql.mysql_db:
+        # name: my_db
+        state: import
+        target: home/ec2-user/app/schema/backend.sql
         
