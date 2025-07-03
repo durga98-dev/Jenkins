@@ -36,3 +36,7 @@
         src: /tmp/backend.zip
         dest: /home/ec2-user/app
         remote_src: yes
+
+    - name: Install dependencies
+      community.general.npm:
+        path: /home/ec2-user/app
