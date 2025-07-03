@@ -30,7 +30,7 @@
         dest: /usr/share/nginx/html
         remote_src: yes
 
-    - name: copy the backend service file
+    - name: copy the expense conf file
       ansible.builtin.copy:
         src: /home/ec2-user/Jenkins/expense-ansible/expense.conf
         dest: /etc/nginx/default.d/expense.conf
