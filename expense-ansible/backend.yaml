@@ -59,7 +59,7 @@
       community.mysql.mysql_db:
         # name: my_db
         name: all
-        login_host: 172.31.20.39
+        login_host: 172.31.19.238
         login_user: root
         login_password: ExpenseApp@1
         state: import
