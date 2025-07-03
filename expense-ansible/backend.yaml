@@ -17,7 +17,6 @@
       - nodejs
       - zip
       - mysql
-      - PyMySQL
 
     - name: Create expense login_user
       ansible.builtin.user:
