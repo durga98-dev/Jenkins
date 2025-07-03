@@ -1,6 +1,7 @@
 - name: Install nodejs and configure backend
   hosts: backend
   connection: ssh 
+  become: yes
   tasks:
     - name: Install nodejs
       ansible.builtin.package:
