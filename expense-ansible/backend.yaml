@@ -63,5 +63,12 @@
         login_user: root
         login_password: ExpenseApp@1
         state: import
-        target: home/ec2-user/app/schema/backend.sql
-        
+        target: /home/ec2-user/app/schema/backend.sql
+
+    - name: Daemon reload and Restart the service
+      systemd.service:
+        enabled: true
+        name: backend
+        state: restarted
+        daemon_reload: true
+      
