@@ -3,8 +3,13 @@
   connection: ssh 
   become: yes
   tasks:
+    - name: Disabling nodejs
+      ansible.builtin.command: "dnf module disable nodejs -y"
+    
+    - name: Enabling nodejs
+      ansible.builtin.command: "dnf module enable nodejs:20 -y"
+    
     - name: Install nodejs
       ansible.builtin.package:
         name: nodejs
-        version: 20
         state: present
