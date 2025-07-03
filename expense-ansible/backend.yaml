@@ -40,3 +40,9 @@
     - name: Install dependencies
       community.general.npm:
         path: /home/ec2-user/app
+
+    - name: copy the backend service file
+      ansible.builtin.copy:
+        src: /home/ec2-user/Jenkins/expense-ansible/backend.service
+        dest: /etc/systemd/system/backend.service
+        remote_src: yes
