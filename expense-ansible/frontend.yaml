@@ -13,31 +13,31 @@
         enabled: true
         state: restarted
 
-    # - name: remove files
-    #   command: "rm -rf /usr/share/nginx/html/*"
+    - name: remove files
+      command: "rm -rf /usr/share/nginx/html/*"
 
-    # - name: Download the code
-    #   ansible.builtin.get_url:
-    #     url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
-    #     dest: /tmp/frontend.zip
+    - name: Download the code
+      ansible.builtin.get_url:
+        url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+        dest: /tmp/frontend.zip
 
-    # # - name: change directory
-    # #   command: cd /usr/share/nginx/html
+    # - name: change directory
+    #   command: cd /usr/share/nginx/html
 
-    # - name: unzip the file
-    #   ansible.builtin.unarchive:
-    #     src: /tmp/frontend.zip
-    #     dest: /usr/share/nginx/html
-    #     remote_src: yes
+    - name: unzip the file
+      ansible.builtin.unarchive:
+        src: /tmp/frontend.zip
+        dest: /usr/share/nginx/html
+        remote_src: yes
 
-    # - name: copy the expense conf file
-    #   ansible.builtin.copy:
-    #     src: /home/ec2-user/Jenkins/expense-ansible/expense.conf
-    #     dest: /etc/nginx/default.d/expense.conf
+    - name: copy the expense conf file
+      ansible.builtin.copy:
+        src: /home/ec2-user/Jenkins/expense-ansible/expense.conf
+        dest: /etc/nginx/default.d/expense.conf
 
-    # - name: Restart the service
-    #   service:
-    #     name: nginx
-    #     state: restarted
+    - name: Restart the service
+      service:
+        name: nginx
+        state: restarted
 
     
