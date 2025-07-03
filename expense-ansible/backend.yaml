@@ -48,6 +48,14 @@
         src: /home/ec2-user/Jenkins/expense-ansible/backend.service
         dest: /etc/systemd/system/backend.service
 
+    - name: Install mysql libraries 
+      ansible.builtin.pip:
+        name: "{{ item }}"
+        executable: pip3.9
+      loop:
+      - PyMySQL
+      - cryptography
+
     - name: Restore database
       community.mysql.mysql_db:
         # name: my_db
