@@ -5,5 +5,5 @@
   tasks:
     - name: Install nodejs
       ansible.builtin.package:
-        name: noejs:20
+        name: nodejs:20
         state: present
