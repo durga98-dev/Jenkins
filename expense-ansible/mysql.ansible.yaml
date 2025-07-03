@@ -21,14 +21,14 @@
     - name: connect to mysql server
       community.mysql.mysql_info:
         login_user: root
-        login_password: ExpenseApp@1 
+        login_password: "ExpenseApp@1" 
         login_host: 98.84.107.230 #mysql public ip
       register: mysql_info
       ignore_errors: true  #ignoring errors
 
     - name: print the output
       debug:
-        msg: " {{ mysql_info }}"
+        msg: "Mysql info: {{ mysql_info }}"
 
     - name: setup root login_password
       ansible.builtin.command: "mysql_secure_installation --set-root-pass ExpenseApp@1"
