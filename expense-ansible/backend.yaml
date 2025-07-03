@@ -11,8 +11,11 @@
     
     - name: Install nodejs
       ansible.builtin.package:
-        name: nodejs
+        name: "{{ item }}"
         state: present
+      loop:
+      - nodejs
+      - zip
 
     - name: Create expense login_user
       ansible.builtin.user:
@@ -27,3 +30,8 @@
       ansible.builtin.get_url:
         url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
         dest: /tmp/backend.zip
+
+    - name: unzip the file
+      ansible.builtin.unarchive:
+        src: /tmp/backend.zip
+        dest: /home/ec2-user/app
