@@ -13,4 +13,13 @@
         state: started
         enabled: yes
 
-  
+    - name: Setup the root password if not Setup
+      community.mysql.mysql_info:
+        login_user: root
+        login_password: ExpenseApp@1 
+        login_host: 98.84.107.230 #mysql public ip
+      register: mysql_info
+
+    - name: print the output
+      debug:
+        msg: " {{ mysql_info }}"
