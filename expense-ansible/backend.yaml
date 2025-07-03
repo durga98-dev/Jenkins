@@ -52,7 +52,7 @@
         # name: my_db
         name: all
         login_host: 172.31.20.39
-        login_name: root
+        login_user: root
         login_password: ExpenseApp@1
         state: import
         target: home/ec2-user/app/schema/backend.sql
