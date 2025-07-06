@@ -1,0 +1,10 @@
+plugin: amazon.aws.aws-ec2
+regions:
+  - us-east-1
+filters:
+  tag:Name: nginx
+  instance_state_name: running
+hostnames:
+  - private-ip-address
+compose:
+  ansible_host: private-ip-address

@@ -1,0 +1,9 @@
+- name: install nginx
+  hosts: all
+  connection: ssh
+  become: yes
+  tasks:
+    - name: Install nginx
+      package:
+        name: nginx
+        state: present
