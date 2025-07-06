@@ -12,6 +12,14 @@
     instance_type: t3.micro
 
   tasks:
+  - name: Install mysql libraries 
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      executable: pip3.9
+    loop:
+    - botocore
+    - boto3
+
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
